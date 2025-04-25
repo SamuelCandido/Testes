@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const stylePref = localStorage.getItem('estilo') || 'default';
 
     // Redirecionamento se não autenticado
-    if (!usuario && window.location.pathname.endsWith('index.html')) {
+    if (!usuario && window.location.pathname.endsWith('principal.html')) {
         window.location.href = 'usuarioNaoIdentificado.html';
         return;
     }
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         logoutBtn.style.display = '';
         logoutBtn.addEventListener('click', () => {
             localStorage.removeItem('usuario');
-            window.location.href = 'cadastro-Login.html';
+            window.location.href = 'index.html';
         });
     }
 });
@@ -90,7 +90,7 @@ function configurarFormularioLogin() {
         const senha = document.getElementById('login-senha').value.trim();
         if (!login || !senha) return alert('Os campos Login e Senha devem estar preenchidos!');
         localStorage.setItem('usuario', login);
-        window.location.href = 'index.html';
+        window.location.href = 'principal.html';
     });
 }
 
@@ -104,7 +104,7 @@ function configurarFormularioCadastro() {
         if (!nome || !email || !senha) return alert('Todos os campos devem estar preenchidos!');
         localStorage.setItem('usuario', email);
         alert('Cadastro realizado com sucesso!');
-        window.location.href = 'index.html';
+        window.location.href = 'principal.html';
     });
 }
 
