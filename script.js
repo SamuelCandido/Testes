@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentPage = window.location.pathname.split('/').pop(); 
 
     // Verifica se a página atual é válida
-    const validURL = validPages.some(page => window.location.href.includes(page));
+    const validURL = validPages.includes(currentPage);
 
     if (!validURL) {
         window.location.href = '404.html';  // Redireciona para a página de erro 404
