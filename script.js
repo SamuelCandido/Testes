@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'sobre.html'
     ]; // Adicione mais páginas válidas aqui
 
-    const currentPage = window.location.pathname.split('/').pop(); // Obtém o nome da página atual
+    const currentPage = window.location.pathname.split('/').pop(); 
 
     // Verifica se a página atual é válida
     const validURL = validPages.some(page => window.location.href.includes(page));
