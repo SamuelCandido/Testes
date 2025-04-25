@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const usuario = localStorage.getItem('usuario');
     const stylePref = localStorage.getItem('estilo') || 'default';
 
-    const validPages = ['principal.html', 'usuarioNaoIdentificado.html', 'index.html', 'outroDadoValido.html']; // Adicione mais páginas válidas aqui
+    const validPages = ['principal.html', 'usuarioNaoIdentificado.html', 'index.html', 'outroDadoValido.html', '404.html', 'contato.html', 'servicos.html', 'sobre.html']; // Adicione mais páginas válidas aqui
     const currentPage = window.location.pathname.split('/').pop();
 
     if (!validPages.includes(currentPage)) {
