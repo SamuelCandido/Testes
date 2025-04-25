@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="styles.css" />
+    <!-- Script JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Cabeçalho fixo com logo e navegação -->
+  <header class="header">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="images/LogoIcone.png" alt="Ícone da Marca" class="logo-icone" />
+        <img src="images/logo.png" alt="Logo Completa" class="logo-img" />
+      </a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="principal.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <div id="user-info" class="user-info">
+      <span id="user-status">Usuário não autenticado</span>
+      <div class="user-icon">
+        <img src="images/user_default.png" alt="Usuário" id="user-icon" class="user-icon-img">
+      </div>
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li id="logout-btn">Sair</li>
+      </ul>
+    </div>    
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="main-contents">
+    <section class="welcome-section">
+      <img src="images/image.jpg" alt="Imagem de Boas-Vindas" class="welcome-image" />
+      <h1>Bem-vindo ao Nosso Site!</h1>
+      <p>Explore nossos recursos e aproveite a experiência personalizada.</p>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>&copy; 2025.</p>
+    <p>Samuel Jose Candido</p>
+  </footer>
+</body>
+</html>
