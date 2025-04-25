@@ -4,6 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const usuario = localStorage.getItem('usuario');
     const stylePref = localStorage.getItem('estilo') || 'default';
 
+    const validPages = ['principal.html', 'usuarioNaoIdentificado.html', 'index.html', 'outroDadoValido.html']; // Adicione mais páginas válidas aqui
+    const currentPage = window.location.pathname.split('/').pop();
+
+    if (!validPages.includes(currentPage)) {
+        window.location.href = '404.html';  // Redireciona para a página de erro 404
+        return;
+    }
+
+
     // Redirecionamento se não autenticado
     if (!usuario && window.location.pathname.endsWith('principal.html')) {
         window.location.href = 'usuarioNaoIdentificado.html';
