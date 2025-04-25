@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'principal.html', 
         'usuarioNaoIdentificado.html', 
         'index.html', 
-        'outroDadoValido.html', 
         '404.html', 
         'contato.html', 
         'servicos.html', 
