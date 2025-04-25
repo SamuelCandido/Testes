@@ -4,14 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const usuario = localStorage.getItem('usuario');
     const stylePref = localStorage.getItem('estilo') || 'default';
 
-    const validPages = ['principal.html', 'usuarioNaoIdentificado.html', 'index.html', 'outroDadoValido.html', '404.html', 'contato.html', 'servicos.html', 'sobre.html']; // Adicione mais páginas válidas aqui
-    const currentPage = window.location.pathname.split('/').pop();
+    // Verificação para redirecionar para 404 se a página não for encontrada
+    const validPages = [
+        'principal.html', 
+        'usuarioNaoIdentificado.html', 
+        'index.html', 
+        'outroDadoValido.html', 
+        '404.html', 
+        'contato.html', 
+        'servicos.html', 
+        'sobre.html'
+    ]; // Adicione mais páginas válidas aqui
 
-    if (!validPages.includes(currentPage)) {
+    const currentPage = window.location.pathname.split('/').pop(); // Obtém o nome da página atual
+
+    // Verifica se a página atual é válida
+    const validURL = validPages.some(page => window.location.href.includes(page));
+
+    if (!validURL) {
         window.location.href = '404.html';  // Redireciona para a página de erro 404
         return;
     }
-
 
     // Redirecionamento se não autenticado
     if (!usuario && window.location.pathname.endsWith('principal.html')) {
